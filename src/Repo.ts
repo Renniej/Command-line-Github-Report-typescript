@@ -1,12 +1,14 @@
 export class Repo{
 
-    constructor(){
-        this.name = "EMPTY";
-        this.description = "EMPTY"
-        this.url = "EMPTY";
-        this.size = -1;
-        this.forkCount = -1;
+    constructor(repo : any){
+        this.name = repo.name;
+        this.description = repo.description
+        this.url = repo.html_url;
+        this.size = repo.size;
+        this.forkCount = repo.forks;
     }
+
+
     name:string;
     description: string;
     url : string;
